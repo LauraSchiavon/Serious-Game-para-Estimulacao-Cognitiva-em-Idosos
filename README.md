@@ -1,1 +1,1 @@
-# Serious-Game-para-Estimula-o-Cognitiva-em-Idosos
+# Serious-Game-para-Estimulacao-Cognitiva-em-Idosos
