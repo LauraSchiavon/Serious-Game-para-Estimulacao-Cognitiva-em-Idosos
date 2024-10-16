@@ -60,7 +60,7 @@ public class TrocaTela : MonoBehaviour
         sceneLoad.allowSceneActivation = true;
     }
 
-    public void trocarParaTelaInicial()
+    public void trocarParaCenaBuild()
     {
         var start = SceneManager.GetActiveScene();
         var sceneLoad = SceneManager.LoadSceneAsync("CenaBuild");
@@ -159,6 +159,12 @@ public class TrocaTela : MonoBehaviour
         public void trocarParaCredito()
     {
         var sceneLoad = SceneManager.LoadSceneAsync("Credito");
+        sceneLoad.allowSceneActivation = true;
+    }
+
+           public void trocarParaInical()
+    {
+        var sceneLoad = SceneManager.LoadSceneAsync("TelaInicial");
         sceneLoad.allowSceneActivation = true;
     }
 }
