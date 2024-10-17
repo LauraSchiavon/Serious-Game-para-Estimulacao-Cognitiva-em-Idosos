@@ -60,7 +60,7 @@ public class Generator : MonoBehaviour
     //Object used to display mistakes made
     public TMP_Text mistakesObject;
 
-    //Object used to display remaining hints
+    //Object used to display remaining hintsa
     public TMP_Text hintsObject;
 
     //Selected value, usually 1 -> 9
@@ -282,9 +282,9 @@ public class Generator : MonoBehaviour
     {
         eraseOn = !eraseOn;
 
-        //Chaning text color based on erase mode status
+        // Changing text color based on erase mode status
         buttonConfig.eraseButton.transform.GetChild(0).gameObject.GetComponent<TMP_Text>().color =
-            eraseOn ? buttonConfig.mainButtonsSelectedColor : buttonConfig.mainButtonsDefaultColor;
+            eraseOn ? buttonConfig.mainButtonsSelectedColor : Color.black;
 
         //If you are using icons instead of text buttons, please enable the following line instead.
         //buttonConfig.eraseButton.GetComponent<Image>().color = eraseOn ? buttonConfig.mainButtonsSelectedColor : buttonConfig.mainButtonsDefaultColor;
@@ -295,9 +295,9 @@ public class Generator : MonoBehaviour
     {
         notesOn = !notesOn;
 
-        //Chaning text color based on notes mode status
+        // Changing text color based on notes mode status
         buttonConfig.notesButton.transform.GetChild(0).gameObject.GetComponent<TMP_Text>().color =
-            notesOn ? buttonConfig.mainButtonsSelectedColor : buttonConfig.mainButtonsDefaultColor;
+            notesOn ? buttonConfig.mainButtonsSelectedColor : Color.black;
 
         //If you are using icons instead of text buttons, please enable the following line instead.
         //buttonConfig.notesButton.GetComponent<Image>().color = notesOn ? buttonConfig.mainButtonsSelectedColor : buttonConfig.mainButtonsDefaultColor;
