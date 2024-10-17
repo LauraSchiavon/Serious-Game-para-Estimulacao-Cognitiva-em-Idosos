@@ -113,8 +113,31 @@ public class Generator : MonoBehaviour
         if (!selectMode) setSelectedValue(1);
         updateHints(0);
         updateMistakes(0);
+
+        clearAllNotes();
+
         gen();
         populateGrid();
+    }
+
+
+    // Clean Notes
+    private void clearAllNotes()
+    {
+        for (int i = 0; i < currentGameObjectMatrix.GetLength(0); i++)
+        {
+            for (int j = 0; j < currentGameObjectMatrix.GetLength(1); j++)
+            {
+                GameObject tile = currentGameObjectMatrix[i, j];
+
+                // Percorre os filhos do tile e desativa todos, exceto o primeiro (que é o valor principal do tile)
+                for (int k = 1; k <= gridSize.x; k++)
+                {
+                    tile.transform.GetChild(k).gameObject.SetActive(false);
+                    tile.transform.GetChild(k).gameObject.GetComponent<Text>().text = "";
+                }
+            }
+        }
     }
 
     private void checkProgress()
