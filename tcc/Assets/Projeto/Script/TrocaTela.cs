@@ -167,4 +167,10 @@ public class TrocaTela : MonoBehaviour
         var sceneLoad = SceneManager.LoadSceneAsync("TelaInicial");
         sceneLoad.allowSceneActivation = true;
     }
+
+    public void trocarParaSobre()
+    {
+        var sceneLoad = SceneManager.LoadSceneAsync("Sobre");
+        sceneLoad.allowSceneActivation = true;
+    }
 }
